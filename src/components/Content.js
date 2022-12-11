@@ -1,14 +1,17 @@
-import Navbar from "components/Navbar";
-import { Switch, Route } from "react-router-dom"
+import { Routes,  Route } from "react-router-dom";
+import Navbar from "components/Navbar"
+import Home from "views/Home"
+import Search from "views/Search"
+import Library from "views/Library"
 function Content() {
     return(
         <main className="flex-auto">
             <Navbar />
-            <Switch>
-                <Route path="/">
-
-                </Route>
-            </Switch>
+            <Routes>
+                <Route path="/" exact element={<Home />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/library" element={<Library />} />
+            </Routes>
         </main>
     )
 }

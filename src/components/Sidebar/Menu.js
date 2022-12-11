@@ -1,31 +1,33 @@
+import { NavLink } from "react-router-dom";
 import {Icon} from "Icons"
+
 function Menu() {
     return (
         <nav className="px-2">
             <ul className="flex flex-col">
                 <li>
-                    <a href="#" className="h-10 flex gap-x-4 items-center text-sm font-semibold text-white hover:text-white px-4 bg-active rounded">
+                    <NavLink to={"/"} className={({ isActive }) => isActive ? "nav-menu-link bg-active text-white" : "nav-menu-link"}>
                         <span>
                             <Icon name="home-active" />
                         </span>
                         Anasayfa
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#" className="h-10 flex gap-x-4 items-center text-sm font-semibold text-link hover:text-white px-4 rounded">
+                    <NavLink to={"/search"} className={({ isActive }) => isActive ? "nav-menu-link bg-active text-white" : "nav-menu-link"}>
                         <span>
                             <Icon name="search" />
                         </span>
                         Ara
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#" className="h-10 flex gap-x-4 items-center text-sm font-semibold text-link hover:text-white px-4 rounded">
+                    <NavLink to={"/library"} className={({ isActive }) => isActive ? "nav-menu-link bg-active text-white" : "nav-menu-link"}>
                         <span>
                             <Icon name="library" />
                         </span>
                         Kitaplığın
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </nav>
