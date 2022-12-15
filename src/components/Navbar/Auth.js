@@ -7,7 +7,7 @@ function Auth() {
         avatar: "https://i.scdn.co/image/ab6775700000ee85082ba6a3c1c26e8817a4a4ec"
     }
     return (
-        <Menu as="nav" className={"relative"}>
+        <Menu as="nav" className={"relative z-10"}>
             {({open}) => (
                 <>
                     <Menu.Button
@@ -24,7 +24,6 @@ function Auth() {
                                 <a href={"foo"} className={`h-10 flex justify-between items-center px-2 text-sm rounded ${active && 'bg-white bg-opacity-10'}`}>
                                     Account
                                     <Icon name="external" size={16}/>
-
                                 </a>
                             )}
                         </Menu.Item>
