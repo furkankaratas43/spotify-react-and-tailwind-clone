@@ -69,6 +69,13 @@ const RightIcon = ({size}) => {
         </svg>
     )
 }
+const UpIcon = ({size}) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width={size} height={size} viewBox="0 0 16 16" data-encore-id="icon">
+            <path fill="currentColor" d="M.47 11.03a.75.75 0 001.06 0L8 4.56l6.47 6.47a.75.75 0 101.06-1.06L8 2.44.47 9.97a.75.75 0 000 1.06z" />
+        </svg>
+    )
+}
 const DownloadIcon = ({size}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" data-encore-id="icon">
@@ -238,6 +245,7 @@ const PictureInPictureIcon = ({size}) => {
     )
 }
 
+
 const Icon = ({name, size = 24}) => {
     const icons = {
         home: HomeIcon,
@@ -251,6 +259,7 @@ const Icon = ({name, size = 24}) => {
         heart2: Heart2Icon,
         left: LeftIcon,
         right: RightIcon,
+        up: UpIcon,
         download: DownloadIcon,
         "down-dir": DownDirIcon,
         external: ExternalIcon,
